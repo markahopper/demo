@@ -1,3 +1,3 @@
-asterisk
-  pkg
+asterisk:
+  pkg:
     - installed
