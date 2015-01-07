@@ -1,10 +1,10 @@
 asterisk
   pkg
     - installed
-  service:
-    - running
-    - require:
-      - pkg: asterisk
+##  service:
+##    - running
+##    - require:
+##      - pkg: asterisk
 
 /etc/asterisk/sip.conf:
   file:
@@ -12,5 +12,5 @@ asterisk
     - source: salt://asterisk/sip.conf
     - require:
       - pkg: asterisk
-    - watach_in:
-      - service: asterisk
+##    - watach_in:
+##      - service: asterisk
