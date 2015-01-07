@@ -5,7 +5,7 @@ asterisk:
     - running
     - require:
       - pkg: asterisk
-/etc/asterisk/sip.conf
+/etc/asterisk/sip.conf:
   file:
     - managed
     - source: salt://asterisk/sip.conf
