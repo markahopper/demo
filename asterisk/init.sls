@@ -1,0 +1,2 @@
+asterisk
+  pkg.install
