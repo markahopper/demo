@@ -7,7 +7,7 @@ asterisk:
       - pkg: asterisk
 /etc/asterisk/sip.conf:
   file:
-    - copied
+    - managed
     - source: salt://asterisk/sip.conf
     - require:
       - pkg: asterisk
