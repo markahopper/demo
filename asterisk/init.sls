@@ -13,3 +13,12 @@ asterisk:
       - pkg: asterisk
     - watch_in:
       - service: asterisk
+
+/etc/asterisk/extensions.conf:
+  file:
+    - managed
+    - source: salt://asterisk/extensions.conf
+    - require:
+      - pkg: asterisk
+      - watch_in:
+      - service: asterisk
