@@ -20,5 +20,5 @@ asterisk:
     - source: salt://asterisk/extensions.conf
     - require:
       - pkg: asterisk
-      - watch_in:
+    - watch_in:
       - service: asterisk
