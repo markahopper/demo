@@ -22,3 +22,12 @@ asterisk:
       - pkg: asterisk
     - watch_in:
       - service: asterisk
+
+/etc/asterisk/voicemail.conf:
+  file:
+    - managed
+    - source: salt://asterisk/voicemail.conf
+    - require:
+      - pkg: asterisk
+    - watch_in:
+      - service: asterisk
