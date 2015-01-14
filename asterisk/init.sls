@@ -45,6 +45,7 @@ ddclient:
   file:
     - managed
     - source: salt://asterisk/ddclient.conf
+    - mode: 600
     - require:
       - pkg: ddclient
     - watch_in:
