@@ -40,3 +40,12 @@ ddclient:
     - running
     - require:
       - pkg: asterisk
+
+/etc/ddclient.conf:
+  file:
+    - managed
+    - source: salt://asterisk/ddclient.conf
+    - require:
+      - pkg: ddclient
+    - watch_in:
+      - service: ddclient
