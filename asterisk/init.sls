@@ -5,6 +5,7 @@ asterisk:
     - running
     - require:
       - pkg: asterisk
+
 /etc/asterisk/sip.conf:
   file:
     - managed
@@ -31,3 +32,11 @@ asterisk:
       - pkg: asterisk
     - watch_in:
       - service: asterisk
+
+ddclient:
+  pkg:
+    - installed
+  service:
+    - running
+    - require:
+      - pkg: asterisk
