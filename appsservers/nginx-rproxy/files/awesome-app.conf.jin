@@ -1,0 +1,30 @@
+### /srv/salt/nginx/files/awesome-app.conf.jin ###
+##################################################
+
+### Configuration file for Nginx to act as a 
+### reverse proxy for an app farm.
+
+# Define the app servers that we're in front of.
+upstream awesome-app {
+    {% for server, addrs in salt['mine.get']('roles:appserver', 'network.ip_addrs', expr_form='grain').items() %}
+    server {{ addrs[0] }}:1337;
+    {% endfor %}
+}
+
+# Forward all port 80 http traffic to our app farm, defined above as 'awesome-app'.
+server {
+    listen       80;
+    server_name  {{ salt['network.ip_addrs']()[1] }};  # <-- change the '1' to '0' if you're not using 
+                                                       #     DigitalOcean's private networking.
+
+    access_log  /var/log/nginx/awesome-app.access.log;
+    error_log  /var/log/nginx/awesome-app.error.log;
+
+    ## forward request to awesome-app ##
+    location / {
+     proxy_pass  http://awesome-app;
+     proxy_set_header        Host            $host;
+     proxy_set_header        X-Real-IP       $remote_addr;
+     proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;
+   }
+}
