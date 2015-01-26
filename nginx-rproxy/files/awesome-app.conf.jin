@@ -14,7 +14,7 @@ upstream awesome-app {
 # Forward all port 80 http traffic to our app farm, defined above as 'awesome-app'.
 server {
     listen       80;
-    server_name  {{ salt['network.ip_addrs']()[1] }};  # <-- change the '1' to '0' if you're not using 
+    server_name  {{ salt['network.ip_addrs']()[0] }};  # <-- change the '1' to '0' if you're not using 
                                                        #     DigitalOcean's private networking.
 
     access_log  /var/log/nginx/awesome-app.access.log;
