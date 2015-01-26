@@ -12,7 +12,7 @@ nginx-rproxy:
   # Place a customized Nginx config file
   file:
     - managed
-    - source: salt://nginx/files/awesome-app.conf.jin
+    - source: salt://nginx-rproxy/files/awesome-app.conf.jin
     - name: /etc/nginx/conf.d/awesome-app.conf
     - template: jinja
     - require:
