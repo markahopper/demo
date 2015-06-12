@@ -1,0 +1,2 @@
+haproxy-docker:
+  image: utahdave/saltdemo:latest
