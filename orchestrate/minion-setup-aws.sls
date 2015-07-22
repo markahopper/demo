@@ -3,7 +3,7 @@ minion_setup:
     - tgt: 'hopz-master2'
     - name: cmd.run
     - arg:
-      - salt-cloud -Pym /etc/salt/cloud.maps.d/docker-with-haproxy.map
+      - salt-cloud -Pym /etc/salt/cloud.maps.d/aws-docker-with-haproxy.map
 slack_minions:
   salt.function:
     - tgt: 'hopz-master2'
