@@ -8,6 +8,7 @@ apache-container:
     - name: apache
     - hostname: apache
     - image: utahdave/saltdemo
+    - mem_limit: !!null
     - require_in: apache
 
 apache:
@@ -24,6 +25,7 @@ apache-container2:
     - name: apache2
     - hostname: apache2
     - image: utahdave/saltdemo
+    - mem_limit: !!null
     - require_in: apache2
 
 apache2:
