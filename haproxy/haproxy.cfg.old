@@ -1,3 +1,5 @@
+{% set image = salt['pillar.get']('haproxy-docker:image', 'utahdave/saltdemo:latest') -%}
+{% set image_installs = salt['mine.get_docker'](interfaces='eth0') -%}
 global
     maxconn 2000
     user haproxy
@@ -20,7 +22,9 @@ listen nginx 0.0.0.0:80
     balance roundrobin
     option httpclose
     option forwardfor
-{% for server, addrs in salt['mine.get']('roles:webserver', 'network.ip_addrs', expr_form='grain').items() %}
-server {{ server }} {{ addrs[0] }}:80 check
-{% endfor %}
+#{% for image_name, info in image_installs.items() if 'ipv4' in info -%}
+#{% for ip_ in info['ipv4'][80] %}
+#    server container{{loop.index}} {{ip_}} check
+#{% endfor -%}
+#{% endfor %}
 
