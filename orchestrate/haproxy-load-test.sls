@@ -10,6 +10,6 @@ process_kill:
     - tgt: 'websvr-02'
     - name: cmd.run
     - arg:
-      - kill %1
+      - killall -9 gzip
     - require:
       - salt: slack_notify
