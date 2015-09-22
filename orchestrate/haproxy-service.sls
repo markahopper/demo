@@ -3,7 +3,7 @@ slack_notify:
     - tgt: 'websvr-01'
     - name: cmd.run
     - arg:
-      - salt-call slack.post_message channel="mh-demo" message="Webserver Failure Spinning Up New Node" from_name="SaltStack 2015.8" api_key=xoxp-2775848702-3347315632-6165482433-b742a0
+      - salt-call slack.post_message channel="mh-demo" message="websrv-01 Failure, Spinning Up New Node" from_name="SaltStack 2015.8" api_key=xoxp-2775848702-3347315632-6165482433-b742a0
 
 minion_setup:
   salt.function:
