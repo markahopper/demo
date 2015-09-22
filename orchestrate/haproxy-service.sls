@@ -29,3 +29,12 @@ haproxy_setup:
     - sls: haproxy.config
     - require:
       - salt: slack_web
+      
+slack_haproxy:
+  salt.function:
+    - tgt: 'haproxy'
+    - name: cmd.run
+    - arg:
+      - salt-call slack.post_message channel="mh-demo" message="Load Balancer Configuration Completed" from_name="SaltStack 2015.8" api_key=xoxp-2775848702-3347315632-6165482433-b742a0
+    - require:
+      - salt: haproxy_setup
