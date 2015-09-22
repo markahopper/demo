@@ -1,5 +1,5 @@
 test.sleep:
   module.run:
-    - length: 10
+    - length: 60
 nginx:
   service.running
