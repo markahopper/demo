@@ -5,7 +5,7 @@ minion_setup_1:
   grains.present:
     - name: roles
     - value: webserver
-  salt.function
+  salt.function:
     - tgt: 'websvr-03'
     - name: cmd.run
       - arg:
