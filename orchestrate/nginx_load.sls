@@ -5,9 +5,13 @@ minion_setup_1:
   grains.present:
     - name: roles
     - value: webserver
+
+minion_setup_1a:
   salt.function:
     - tgt: hopz-master1
     - name: cmd.run
     - arg:
       - salt websvr-03 mine.set network.ip_addrs
+    - require:
+      - salt: minion_setup_1
 
