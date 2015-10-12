@@ -5,4 +5,9 @@ minion_setup_1:
   grains.present:
     - name: roles
     - value: webserver
+  salt.function
+    - tgt: 'websvr-03'
+      - name: cmd.run
+      - arg:
+        - salt websvr-03 mine.set network.ip_addrs
 
