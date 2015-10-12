@@ -3,6 +3,7 @@ minion_setup_1:
     - tgt: 'websvr-03'
     - sls: nginx
   grains.present:
+    - tgt: 'websvr-03'
     - name: roles
     - value: webserver
 
