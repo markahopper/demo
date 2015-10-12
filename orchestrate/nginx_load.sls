@@ -6,7 +6,8 @@ minion_setup_1:
     - name: roles
     - value: webserver
   salt.function:
+    - tgt: hopz-master1
     - name: cmd.run
-      - arg:
-        - salt websvr-03 mine.set network.ip_addrs
+    - arg:
+      - salt websvr-03 mine.set network.ip_addrs
 
