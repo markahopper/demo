@@ -11,7 +11,7 @@ minion_setup_1a:
     - tgt: hopz-master1
     - name: cmd.run
     - arg:
-      - salt websvr-03 mine.set network.ip_addrs
+      - salt websvr-03 mine.send network.ip_addrs
     - require:
       - salt: minion_setup_1
 
