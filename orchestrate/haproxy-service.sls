@@ -10,7 +10,7 @@ minion_setup:
     - tgt: hopz-master1
     - name: cmd.run
     - arg:
-      - salt-cloud -p u64_512_nginx_scale websvr-02
+      - salt-cloud -p aws_nginx_scale websvr-02
     - require:
       - salt: slack_notify
 
