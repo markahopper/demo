@@ -19,7 +19,7 @@ stop_database:
     - tgt_type: grain
     - name: service.stop
     - arg:
-      - nginx
+      - mysql
     - require:
       - salt: stop_webserver
 slack_mysql:
