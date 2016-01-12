@@ -5,6 +5,8 @@ start_webserver:
     - name: service.start
     - arg:
       - nginx
+    - require:
+      - salt: start_database
 slack_nginx:
   salt.function:
     - tgt: 'hopz-master1'
@@ -20,8 +22,6 @@ start_database:
     - name: service.start
     - arg:
       - mysql
-    - require:
-      - salt: start_webserver
 slack_mysql:
   salt.function:
     - tgt: 'hopz-master1'
