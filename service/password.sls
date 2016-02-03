@@ -5,6 +5,6 @@ VBoxService:
 service.config:
   module.run:
     - name: service.config
-    - m_name: KBoxService
+    - m_name: 'KBoxService'
     - obj: './account'
     - password: 'account'
