@@ -3,7 +3,7 @@ VBoxService:
     - enable: True
     
 service.config:
-  salt.function:
+  module.run:
     - name: service.config
     - kwargs: {
         name: KBoxService,
