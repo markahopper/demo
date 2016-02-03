@@ -4,7 +4,7 @@ VBoxService:
     
 service.config:
   module.run:
-    - name: service.config
+    - m_name: service.config
     - kwargs: {
         name: KBoxService,
         obj: ./account,
