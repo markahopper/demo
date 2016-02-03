@@ -1,3 +1,3 @@
 VBoxService:
   service.dead:
-    enable: True
+    - enable: True
