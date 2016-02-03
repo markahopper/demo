@@ -3,7 +3,10 @@ VBoxService:
     - enable: True
     
 service.config:
-  module.run:
-    - name: VBoxService
-    - obj: '.\account'
-    - password: 'account'
+  salt.function:
+    - name: service.config
+    - kwargs: {
+        name: KBoxService
+        obj: ./account
+        password: account
+      }
