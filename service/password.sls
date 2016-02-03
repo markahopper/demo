@@ -7,4 +7,4 @@ service.config:
     - name: service.config
     - m_name: KBoxService
     - obj: './account'
-    - password: account
+    - password: 'account'
