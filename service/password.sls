@@ -7,4 +7,4 @@ change_password:
     - name: service.config
     - m_name: 'VBoxService'
     - obj: '.\account'
-    - password: 'account'
+    - password: 'hopper'
