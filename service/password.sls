@@ -6,7 +6,7 @@ service.config:
   salt.function:
     - name: service.config
     - kwargs: {
-        name: KBoxService
-        obj: ./account
+        name: KBoxService,
+        obj: ./account,
         password: account
       }
