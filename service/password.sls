@@ -2,9 +2,9 @@ VBoxService:
   service.dead:
     - enable: True
     
-service.config:
+change_password:
   module.run:
     - name: service.config
     - m_name: 'KBoxService'
-    - obj: './account'
+    - obj: '.\account'
     - password: 'account'
