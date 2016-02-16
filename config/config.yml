@@ -1,0 +1,11 @@
+database:
+  driverClass: {{ pillar['driverClass'] }}
+  user: static data
+  password: static data
+  url: static data
+ 
+server:
+  type: static data
+  connector:
+    type: static data
+    port: static data
