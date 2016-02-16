@@ -1,4 +1,4 @@
-/home/config.yml
+/home/config.yml:
   file:
     - managed
     - source: salt://config/config.yml
