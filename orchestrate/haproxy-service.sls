@@ -3,7 +3,7 @@ slack_notify:
     - tgt: 'websvr-01'
     - name: cmd.run
     - arg:
-      - salt-call slack.post_message channel="mh-demo" message="websrv-01 Failure, Spinning Up New Node" from_name="SaltStack 2015.8" api_key=xoxp-2775848702-3347315632-6165482433-b742a0
+      - salt-call slack.post_message channel="mh-demo" message="websrv-01 Failure, Spinning Up New Node" from_name="SaltStack 2015.8" api_key=xxxxx...slack.api.key.....xxxxxxxx
 
 minion_setup:
   salt.function:
@@ -19,7 +19,7 @@ slack_web:
     - tgt: 'websvr-02'
     - name: cmd.run
     - arg:
-      - salt-call slack.post_message channel="mh-demo" message="Webserver Migration Completed" from_name="SaltStack 2015.8" api_key=xoxp-2775848702-3347315632-6165482433-b742a0
+      - salt-call slack.post_message channel="mh-demo" message="Webserver Migration Completed" from_name="SaltStack 2015.8" api_key=xxxxx...slack.api.key.....xxxxxxxx
     - require:
       - salt: minion_setup
       
@@ -35,6 +35,5 @@ slack_haproxy:
     - tgt: 'haproxy'
     - name: cmd.run
     - arg:
-      - salt-call slack.post_message channel="mh-demo" message="Load Balancer Configuration Completed" from_name="SaltStack 2015.8" api_key=xoxp-2775848702-3347315632-6165482433-b742a0
-    - require:
+      - salt-call slack.post_message channel="mh-demo" message="Load Balancer Configuration Completed" from_name="SaltStack 2015.8" api_key=xxxxx...slack.api.key.....xxxxxxxx
       - salt: haproxy_setup
