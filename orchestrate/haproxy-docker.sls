@@ -15,7 +15,7 @@ slack_docker:
     - tgt: 'docker*'
     - name: cmd.run
     - arg:
-      - salt-call slack.post_message channel="mh-demo" message="Docker Setup Completed" from_name="SaltStack Enterprise 4.0" api_key=xoxp-2775848702-3347315632-6165482433-b742a0
+      - salt-call slack.post_message channel="mh-demo" message="Docker Setup Completed" from_name="SaltStack Enterprise 4.0" api_key=xoxp-xxxxxxxxxx
 docker_apache:
   salt.state:
     - tgt: 'docker*'
@@ -27,7 +27,7 @@ slack_apache:
     - tgt: 'docker*'
     - name: cmd.run
     - arg:
-      - salt-call slack.post_message channel="mh-demo" message="Apache Setup Completed" from_name="SaltStack Enterprise 4.0" api_key=xoxp-2775848702-3347315632-6165482433-b742a0
+      - salt-call slack.post_message channel="mh-demo" message="Apache Setup Completed" from_name="SaltStack Enterprise 4.0" api_key=xoxp-xxxxxxxxxx
 haproxy_setup:
   salt.state:
     - tgt: 'haproxy*'
@@ -39,10 +39,10 @@ slack_haproxy:
     - tgt: 'haproxy*'
     - name: cmd.run
     - arg:
-      - salt-call slack.post_message channel="mh-demo" message="HAProxy Setup Completed" from_name="SaltStack Enterprise 4.0" api_key=xoxp-2775848702-3347315632-6165482433-b742a0
+      - salt-call slack.post_message channel="mh-demo" message="HAProxy Setup Completed" from_name="SaltStack Enterprise 4.0" api_key=xoxp-xxxxxxxxxx
 slack_complete:
   salt.function:
     - tgt: 'haproxy*'
     - name: cmd.run
     - arg:
-      - salt-call slack.post_message channel="mh-demo" message="Orchestration Completed" from_name="SaltStack Enterprise 4.0" api_key=xoxp-2775848702-3347315632-6165482433-b742a0
+      - salt-call slack.post_message channel="mh-demo" message="Orchestration Completed" from_name="SaltStack Enterprise 4.0" api_key=xoxp-xxxxxxxxxx

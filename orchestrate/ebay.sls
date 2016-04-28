@@ -15,7 +15,7 @@ slack_docker:
     - tgt: 'vm.local'
     - name: cmd.run
     - arg:
-      - salt-call slack.post_message channel="mh-demo" message="Docker Setup Completed" from_name="SaltStack" api_key=xoxp-2775848702-3347315632-6165482433-b742a0
+      - salt-call slack.post_message channel="mh-demo" message="Docker Setup Completed" from_name="SaltStack" api_key=xoxp-xxxxxxxxxx
 docker_apache:
   salt.state:
     - tgt: 'vm2.local'
@@ -27,4 +27,4 @@ slack_apache:
     - tgt: 'vm2.local'
     - name: cmd.run
     - arg:
-      - salt-call slack.post_message channel="mh-demo" message="Apache Setup Completed" from_name="SaltStack" api_key=xoxp-2775848702-3347315632-6165482433-b742a0
+      - salt-call slack.post_message channel="mh-demo" message="Apache Setup Completed" from_name="SaltStack" api_key=xoxp-xxxxxxxxxx

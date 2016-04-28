@@ -10,7 +10,7 @@ slack_nginx:
     - tgt: 'hopz-master1'
     - name: cmd.run
     - arg:
-      - salt-call slack.post_message channel="mh-demo" message="Web Applications Stopped" from_name="SaltStack" api_key=xoxp-2775848702-3347315632-6165482433-b742a0
+      - salt-call slack.post_message channel="mh-demo" message="Web Applications Stopped" from_name="SaltStack" api_key=xoxp-xxxxxxxxxx
     - require:
       - salt: stop_webserver
 stop_database:
@@ -27,6 +27,6 @@ slack_mysql:
     - tgt: 'hopz-master1'
     - name: cmd.run
     - arg:
-      - salt-call slack.post_message channel="mh-demo" message="Database Stopped" from_name="SaltStack" api_key=xoxp-2775848702-3347315632-6165482433-b742a0
+      - salt-call slack.post_message channel="mh-demo" message="Database Stopped" from_name="SaltStack" api_key=xoxp-xxxxxxxxxx
     - require:
       - salt: stop_database

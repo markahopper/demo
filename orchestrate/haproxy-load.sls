@@ -3,7 +3,7 @@ slack_notify:
     - tgt: 'hopz-master1'
     - name: cmd.run
     - arg:
-      - salt-call slack.post_message channel="mh-demo" message="websvr-02 is experiencing unusual load, Spinning Up Additional Nodes" from_name="SaltStack 2015.8" api_key=xoxp-2775848702-3347315632-6165482433-b742a0
+      - salt-call slack.post_message channel="mh-demo" message="websvr-02 is experiencing unusual load, Spinning Up Additional Nodes" from_name="SaltStack 2015.8" api_key=xoxp-xxxxxxxxxx
 
 process_kill:
   salt.function:
@@ -28,7 +28,7 @@ slack_web:
     - tgt: 'websvr-03'
     - name: cmd.run
     - arg:
-      - salt-call slack.post_message channel="mh-demo" message="Additional Web Servers Online" from_name="SaltStack 2015.8" api_key=xoxp-2775848702-3347315632-6165482433-b742a0
+      - salt-call slack.post_message channel="mh-demo" message="Additional Web Servers Online" from_name="SaltStack 2015.8" api_key=xoxp-xxxxxxxxxx
     - require:
       - salt: minion_setup
       
@@ -44,6 +44,6 @@ slack_haproxy:
     - tgt: 'haproxy'
     - name: cmd.run
     - arg:
-      - salt-call slack.post_message channel="mh-demo" message="Load Balancer Configuration Completed" from_name="SaltStack 2015.8" api_key=xoxp-2775848702-3347315632-6165482433-b742a0
+      - salt-call slack.post_message channel="mh-demo" message="Load Balancer Configuration Completed" from_name="SaltStack 2015.8" api_key=xoxp-xxxxxxxxxx
     - require:
       - salt: haproxy_setup

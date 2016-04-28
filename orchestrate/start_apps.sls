@@ -10,7 +10,7 @@ slack_mysql:
     - tgt: 'hopz-master1'
     - name: cmd.run
     - arg:
-      - salt-call slack.post_message channel="mh-demo" message="Database started" from_name="SaltStack" api_key=xoxp-2775848702-3347315632-6165482433-b742a0
+      - salt-call slack.post_message channel="mh-demo" message="Database started" from_name="SaltStack" api_key=xoxp-xxxxxxxxxx
     - require:
       - salt: start_database
 start_webserver:
@@ -27,6 +27,6 @@ slack_nginx:
     - tgt: 'hopz-master1'
     - name: cmd.run
     - arg:
-      - salt-call slack.post_message channel="mh-demo" message="Web Applications started" from_name="SaltStack" api_key=xoxp-2775848702-3347315632-6165482433-b742a0
+      - salt-call slack.post_message channel="mh-demo" message="Web Applications started" from_name="SaltStack" api_key=xoxp-xxxxxxxxxx
     - require:
       - salt: start_webserver
