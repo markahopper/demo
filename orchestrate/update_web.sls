@@ -15,14 +15,14 @@ update_site:
     - tgt: 'web01'
     - sls: web.pretty
     - require:
-      - demo_pause
+      - salt: update_haproxy_1
       
 add_server:
   salt.function:
     - tgt: 'web01'
     - name: mine.update
     - require:
-      - update_site
+      - salt: update_site
 
 update_haproxy_2:
   salt.state:
