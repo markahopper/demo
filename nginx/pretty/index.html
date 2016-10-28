@@ -49,8 +49,8 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Grains <b class="caret"></b></a>
           <ul class="dropdown-menu">
-          {% if grains['os'] == 'Ubuntu' %}
-            <li><a href="#">HOSTNAME: {{ grains['host'] }}</a></li>
+          {% if grains['kernel'] == 'Linux' %}
+            <li><a href="#">HOSTNAME: {{ grains['id'] }}</a></li>
             <li><a href="#">CPU ARCH: {{ grains['cpuarch'] }}</a></li>
             <li><a href="#">CPUs: {{ grains['num_cpus'] }}</a></li>
             <li><a href="#">CPU MODEL: {{ grains['cpu_model'] }}</a></li>
@@ -100,7 +100,7 @@
 				<div class="col-lg-8 col-lg-offset-2">
 					<div class="wow bounceInDown" data-wow-delay="0.4s">
 					<div class="section-heading">
-					<h2>Your SaltStack Presentation Team</h2>
+					<h2>Your SaltStack Account Team</h2>
 					<i class="fa fa-2x fa-angle-down"></i>
 
 					</div>
@@ -132,8 +132,8 @@
 				<div class="wow bounceInUp" data-wow-delay="0.5s">
                 <div class="team boxed-grey">
                     <div class="inner">
-						<h5>Charles C. Ruffino</h5>
-                        <p class="subtitle">SaltStack CSS Stylist</p>
+						<h5>Jess Arrington</h5>
+                        <p class="subtitle">Area Sales Director</p>
                         <div class="avatar"><img src="img/team/2.jpg" alt="" class="img-responsive img-circle" /></div>
 
                     </div>
@@ -144,7 +144,7 @@
 				<div class="wow bounceInUp" data-wow-delay="0.8s">
                 <div class="team boxed-grey">
                     <div class="inner">
-						<h5>Nate Brooks</h5>
+						<h5>Mark Hopper</h5>
                         <p class="subtitle">SaltStack Sales Engineer</p>
                         <div class="avatar"><img src="img/team/3.jpg" alt="" class="img-responsive img-circle" /></div>
 
@@ -152,18 +152,18 @@
                 </div>
 				</div>
             </div>
-			<div class="col-xs-6 col-sm-3 col-md-3">
-				<div class="wow bounceInUp" data-wow-delay="1s">
-                <div class="team boxed-grey">
-                    <div class="inner">
-						<h5>Mark Hopper</h5>
-                        <p class="subtitle">SaltStack Sales Engineer</p>
-                        <div class="avatar"><img src="img/team/4.jpg" alt="" class="img-responsive img-circle" /></div>
-
-                    </div>
-                </div>
-				</div>
-            </div>
+#			<div class="col-xs-6 col-sm-3 col-md-3">
+#				<div class="wow bounceInUp" data-wow-delay="1s">
+#                <div class="team boxed-grey">
+#                   <div class="inner">
+#						<h5>Mark Hopper</h5>
+#                        <p class="subtitle">SaltStack Sales Engineer</p>
+#                       <div class="avatar"><img src="img/team/4.jpg" alt="" class="img-responsive img-circle" /></div>
+#
+#                    </div>
+#                </div>
+#				</div>
+#            </div>
         </div>		
 		</div>
 	</section>
